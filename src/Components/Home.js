@@ -27,6 +27,7 @@ const Home = () => {
         if (file) {
             if (!file.type.startsWith('image/')) {
                 setError(true);
+                setErrorMessage('Please input Image file type!');
                 return;
             }
             setError(false)
