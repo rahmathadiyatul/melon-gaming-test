@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Input } from '@mui/joy';
 import './../Home.css';
 
-const CanvasProperty = ({ width, height, onCanvasSizeChange }) => {
+const CanvasProperty = ({ width, height, onCanvasSizeChange, isImageUploaded }) => {
     const [canvasWidth, setCanvasWidth] = useState(width);
     const [canvasHeight, setCanvasHeight] = useState(height);
 
@@ -40,7 +40,7 @@ const CanvasProperty = ({ width, height, onCanvasSizeChange }) => {
                     </Button>
                 } variant='soft' id="canvas-height" value={canvasHeight} onChange={handleChangeHeight}></Input>
             </span>
-            <Button onClick={handleApplyChanges}>Change Size</Button>
+            <Button disabled={isImageUploaded} onClick={handleApplyChanges}>Change Size</Button>
         </div>
     );
 };

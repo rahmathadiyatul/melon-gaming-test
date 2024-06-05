@@ -121,7 +121,7 @@ const Home = () => {
                 </Alert>
             </Snackbar>
             <div className='editor'>
-                <CanvasProperty width={canvasWidth} height={canvasHeight} onCanvasSizeChange={handleCanvasSizeChange} />
+                <CanvasProperty width={canvasWidth} height={canvasHeight} onCanvasSizeChange={handleCanvasSizeChange} isImageUploaded={isImagePropShown} />
                 <canvas className='image-field' ref={canvasRef}></canvas>
                 {
                     isImagePropShown
